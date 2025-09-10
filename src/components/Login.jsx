@@ -1,12 +1,15 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom"; 
 
 const Login = (props) => {
   return (
     <Container>
       <Nav>
+        <Link to="/home">
         <a href="/">
           <img src="/images/login-logo.svg" alt="" />
         </a>
+        </Link>
         <div>
           <Join>Join now</Join>
           <SignIn>Sign in</SignIn>
