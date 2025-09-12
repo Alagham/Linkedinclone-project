@@ -42,9 +42,27 @@ const Main = (props) => {
                         </div> 
                     </a>
                     <button>
-                        <img src="/images/ellipsis.pg" alt="..." />
+                        <img src="/images/ellipsis.png" alt="..." />
                     </button>
                 </SharedActor>
+                <Discription>Discription</Discription>
+                <SharedImg>
+                    <a>
+                        <img src="/images/user.svg" alt="" />
+                    </a>
+                </SharedImg>
+                <SocialCounts>
+                    <li>
+                        <button>
+                            <img src="/images/likeicon.png" alt="" />
+                            <img src="/images/clapicon.png" alt="" />
+                            <span>75</span>
+                        </button>
+                    </li>
+                    <li>
+                        <a>2 comments</a>
+                    </li>
+                </SocialCounts>
             </Article>
         </div>
     </Container>
@@ -149,7 +167,80 @@ const SharedActor = styled.div`
             width:48px;
             height: 48px;
         }
+        & > div {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            flex-basis: 0;
+            margin-left: 8px;
+            overflow: hidden;
+            span {
+                text-align: left;
+                &:first-child{
+                   font-size: 14px;
+                   font-weight:700;
+                   color: rgba(0, 0, 0, 1);
+                }
+
+                &:nth-child(n+1){
+                    font-size: 12px;
+                    color: rgba(0, 0, 0, 0.6);
+                }
+            }
+        }
     }
 
+button{
+  position: absolute;
+  right: 12px;
+  top: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  img{
+    width: 30px;
+  }
+}
+`;
+
+const Discription = styled.div`
+padding: 0 16px;
+overflow: hidden;
+color: rgba(0, 0, 0, 0.9);
+font-size: 14px;
+text-align: left;
+`;
+const SharedImg = styled.div`
+margin-top: 8px;
+width: 100%;
+display: block;
+position: relative;
+background-color: #f9fafb;
+img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+`;
+const SocialCounts = styled.ul`
+    line-height: 1.3;
+    display: flex;
+    align-items: flex-start;
+    overflow: auto;
+    margin:0 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid #e9e5df;
+    list-style: none;
+    li{
+        margin-right: 5px;
+        font-size: 12px;
+        button{
+            display: flex;
+            
+            img{
+                width: 15px;
+            }
+        }
+    }
 `
 export default Main;
