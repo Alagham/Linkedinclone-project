@@ -48,6 +48,7 @@ const Leftside = (props) => {
           <span>Discover more</span>
         </a>
       </CommunityCard>
+      
     </Container>
   );
 };
