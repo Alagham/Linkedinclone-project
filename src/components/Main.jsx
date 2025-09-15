@@ -54,8 +54,8 @@ const Main = (props) => {
                 <SocialCounts>
                     <li>
                         <button>
-                            <img src="/images/likeicon.png" alt="" />
-                            <img src="/images/clapicon.png" alt="" />
+                            <img src="/images/like-icon.svg" alt="" />
+                            <img src="/images/clap-icon.svg" alt="" />
                             <span>75</span>
                         </button>
                     </li>
@@ -63,6 +63,24 @@ const Main = (props) => {
                         <a>2 comments</a>
                     </li>
                 </SocialCounts>
+                <SocialActions>
+                    <button>
+                        <img src="/images/like-icon.svg" alt="" />
+                        <span>Like</span>
+                    </button>
+                    <button>
+                        <img src="/images/commenticon.png" alt="" />
+                        <span>Comments</span>
+                    </button>
+                    <button>
+                        <img src="/images/share-icon.png" alt="" />
+                        <span>Share</span>
+                    </button>
+                    <button>
+                        <img src="/images/send-icon.png" alt="" />
+                        <span>Send</span>
+                    </button>
+                </SocialActions>
             </Article>
         </div>
     </Container>
@@ -236,11 +254,33 @@ const SocialCounts = styled.ul`
         font-size: 12px;
         button{
             display: flex;
-            
+
             img{
                 width: 15px;
             }
         }
     }
-`
+`;
+const SocialActions = styled.div`
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    margin:0;
+    min-height: 40px;
+    padding: 4px 8px;
+
+    button{
+        display: inline-flex;
+        align-items: center;
+        padding: 8px;
+        color:#0a66c2;
+
+        @media(min-width: 768px){
+            margin-left: 8px;
+        }
+        img{
+            width:15px;
+        }
+    }
+`;
 export default Main;
