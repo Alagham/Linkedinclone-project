@@ -6,6 +6,7 @@ const userReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {   // ✅ fixed
         case "SET_USER":
             return { ...state, user: action.payload };
+            
         default:
             return state;
     }
