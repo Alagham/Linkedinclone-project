@@ -9,6 +9,7 @@ const Header = (props) => {
             <img src="/images/home-logo.svg" alt="" />
           </a>
         </Logo>
+
         <Search>
           <div>
             <input type="text" placeholder="Search" />
@@ -17,6 +18,7 @@ const Header = (props) => {
             <img src="/images/search-icon.svg" alt="" />
           </SearchIcon>
         </Search>
+        
         <Nav>
           <NavListWrap>
             <NavList className="active">
