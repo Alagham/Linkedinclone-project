@@ -6,10 +6,12 @@ const Leftside = (props) => {
       <ArtCard>
         <UserInfo>
           <CardBackground />
+
           <a>
             <Photo />
             <Link>Welcome, there</Link>
           </a>
+          
           <a>
             <AddPhotoText>Add a photo</AddPhotoText>
           </a>
