@@ -16,6 +16,7 @@ const Rightside = (props) => {
             </a>
             <div>
               <span>#Linkedin</span>
+              
               <button>Follow</button>
             </div>
           </li>
